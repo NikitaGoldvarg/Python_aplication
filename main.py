@@ -18,7 +18,7 @@ async def read_users( url):
 
 
 @router.get("/")
-async def read_users( url):
+async def home_page():
     html = f'''
         <html>
             <body>
