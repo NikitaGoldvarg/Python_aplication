@@ -1,5 +1,7 @@
 from fastapi import FastAPI, requests , APIRouter
 from fastapi.responses import HTMLResponse
+import uvicorn
+
 app = FastAPI()
 router = APIRouter
 
@@ -15,3 +17,7 @@ async def read_users( url):
     return HTMLResponse(html)
 
 app.include_router(router)
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host='0.0.0.0',  port=80)
