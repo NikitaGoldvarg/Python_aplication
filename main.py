@@ -16,6 +16,18 @@ async def read_users( url):
         '''
     return HTMLResponse(html)
 
+
+@router.get("/")
+async def read_users( url):
+    html = f'''
+        <html>
+            <body>
+                <p>"Home page"</p>
+            </body>
+        </html>
+        '''
+    return HTMLResponse(html)
+
 app.include_router(router)
 
 
